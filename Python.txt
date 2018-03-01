@@ -1,0 +1,42 @@
+
+import pygame
+import tsk
+import random
+pygame.init()
+clock = pygame.time.Clock()
+
+window = pygame.display.set_mode([400, 400])
+white = (255, 255, 255)
+black = (0, 0, 0)
+red = (255, 0, 0)
+window.fill(white)
+
+choice = input("What color would you like? ")
+color = black
+if choice == "red":
+ color = (255, 0, 0)
+if choice == "blue":
+ color = (0, 0, 255)
+if choice == "green":
+ color = (0, 255, 0)
+if choice == "red":
+ color = red
+if choice == "red":
+ color = red
+if choice == "red":
+ color = red
+if choice == "red":
+ color = red
+
+drawing = True
+while drawing:
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            drawing = False
+    
+    
+        if event.type == pygame.MOUSEBUTTONDOWN: 
+            x, y = pygame.mouse.get_pos()
+            pygame.draw.circle(window, color, (x, y), 5)
+    
+    pygame.display.flip()
